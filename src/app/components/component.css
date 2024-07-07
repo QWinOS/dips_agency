@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base { */
+/* } */
+
+@layer base {
+}
+
+@layer utilities {
+  .headerFooterColor {
+    @apply bg-[#ffffff] duration-500 ease-in dark:bg-[#000000];
+  }
+}
+
+.wrapper {
+  position: relative;
+  width: 30px;
+  max-width: 1080px;
+  aspect-ratio: 1/1;
+  margin: 2rem auto;
+}
+.cardImage {
+  position: relative;
+}

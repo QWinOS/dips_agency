@@ -1,113 +1,85 @@
 import Image from "next/image";
-
+import Img_2 from "../app/resources/2.webp";
+import Img_3 from "../app/resources/3.webp";
+import { Test, Img_3_parallex } from "./test";
+import Link from "next/link";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <title>Shipping | Dips Agency</title>
+      <div className="flex items-center justify-between">
+        <Test />
+      </div>
+      <div className="flex items-center justify-around sm:px-40 pt-20">
+        <div className="sm:w-1/2 h-full text-center tracking-wide leading-loose px-10 text-lg">
+          <p className="flex justify-center leading-10 text-4xl font-extrabold">
+            ABOUT
+          </p>
+          <br />
+          <p>
+            Over the years, we’ve learned that great service begins and ends
+            with experienced and friendly professionals, which explains our
+            reliable services. We believe that our team is the best in the
+            business, and have complete and total confidence in every person
+            providing our services.
+          </p>
+          <br />
+          <p>
+            Dips Agency finishes each project on schedule and with the highest
+            level of quality. With a focus on personalized service, competitive
+            rates and customer satisfaction, we’re always striving to meet and
+            exceed expectations.
+          </p>
+        </div>
+        <div className="">
+          <Image
+            src={Img_2}
+            alt="SS"
+            // height={900}
+            // width={3400}
+            className="object-left object-cover hidden sm:flex"
+          />
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      <Image
+        src={Img_3}
+        alt="Dips Agency"
+        className="flex sm:hidden object-cover pt-20"
+      />
+      <div className="flex items-center justify-around sm:px-40 pt-20">
+        <div className="sm:w-1/2 h-full text-center tracking-wide leading-loose px-10 text-lg">
+          <p className="flex justify-center leading-10 text-4xl font-extrabold">
+            GET IN TOUCH
+          </p>
+          <p className="pt-5 sm:pt-10">
+            Block D, Plot No. 27, Durgachak Colony, Haldia
+          </p>
+          <p className="sm:pt-10">
+            <Link href="mailto:dipsagency@gmail.com">dipsagency@gmail.com</Link>
+          </p>
+          <p className="sm:pt-10">+919732542518</p>
+        </div>
+        <div className="">
+          <Img_3_parallex />
+        </div>
+      </div>
+      <div className="justify-around px-40 hidden sm:flex">
+        {/* <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d472385.69373818656!2d87.78915446562795!3d22.33424184633197!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02f778fb4973b7%3A0xa077ebe22e5773e5!2sDips%20Agency!5e0!3m2!1sen!2sin!4v1720348814416!5m2!1sen!2sin"
+          width="1500"
+          height="500"
+          style={{ border: 0 }}
+          loading="lazy"
+        /> */}
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d946524.873369225!2d88.137655!3d22.073958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02f778fb4973b7%3A0xa077ebe22e5773e5!2sDips%20Agency!5e0!3m2!1sen!2sin!4v1720363057629!5m2!1sen!2sin"
+          width="2000"
+          height="600"
+          style={{ border: 10 }}
+          loading="lazy"
         />
       </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <br />
+    </>
   );
 }
