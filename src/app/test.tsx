@@ -14,17 +14,17 @@ export function Test() {
       <div className="sm:hidden">
         <Image src={Img_1} alt="Dips Agency" />
       </div>
-      <div className="hidden sm:flex">
-        <ParallaxBanner
-          layers={[
-            {
-              image: "/1.webp",
-              speed: -50,
-            },
-          ]}
-          className="aspect-[2/1] flex"
-        />
-      </div>
+      {/* <div className=""> */}
+      <ParallaxBanner
+        layers={[
+          {
+            image: "/1.webp",
+            speed: -50,
+          },
+        ]}
+        className="aspect-[2/1] hidden sm:flex"
+      />
+      {/* </div> */}
     </>
   );
 }

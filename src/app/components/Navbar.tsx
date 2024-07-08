@@ -10,6 +10,12 @@ import "./component.css";
 // import { motion, AnimatePresence } from "framer-motion";
 // import ThemeModeToggler from "./ThemeModeToggler";
 
+const isBrowser = () => typeof window !== "undefined"; //The approach recommended by Next.js
+
+function scrollToTop() {
+  if (!isBrowser()) return;
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 const navLinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
@@ -158,7 +164,7 @@ export default function Navbar() {
   return (
     <div className="headerFooterColor fixed top-0 z-20 h-10 w-full shadow-xl sm:h-10">
       {/* Tab Desktop Navbar */}
-      <div className=" h-10 w-full items-center justify-between px-4 sm:h-10 2xl:px-16 bg-red-400 flex-row-reverse hidden sm:flex sm:flex-row">
+      <div className=" h-10 w-full items-center justify-between px-4 sm:h-10 2xl:px-16 bg-[#22283A] flex-row-reverse hidden sm:flex sm:flex-row">
         <div className="hidden sm:flex">
           {navLinks.map((link, index) => {
             return (
@@ -174,13 +180,13 @@ export default function Navbar() {
         </div>
       </div>
       {/* Mobile Navbar */}
-      <div className="visible sm:hidden h-16 w-full items-center justify-between px-4 flex-row-reverse flex bg-[#E5EDF1] dark:bg-yellow-300">
+      <div className="visible sm:hidden h-16 w-full items-center justify-between px-4 flex-row-reverse flex bg-[#E5EDF1] dark:bg-[#22283A]">
         <div onClick={handleNav} className="cursor-pointer ">
           <MdOutlineMenu size={30} />
         </div>
         {/* <AnimatePresence> */}
         {menuOpen && (
-          <div className="fixed left-0 top-0 h-[100dvh] w-[100dvw] origin-top pl-10 pt-5 pr-3 flex flex-col items-center bg-purple-400">
+          <div className="fixed left-0 top-0 h-[100dvh] w-[100dvw] origin-top pl-10 pt-5 pr-3 flex flex-col items-center bg-white dark:bg-black">
             {/* // <motion.div
           //   variants={menuVars}
           //   initial="initial"
@@ -226,6 +232,10 @@ export default function Navbar() {
                 <button
                   className="overflow-hidden flex p-5 text-5xl"
                   key={index}
+                  onClick={function (evet) {
+                    handleNav();
+                    scrollToTop();
+                  }}
                 >
                   <MobileNavLink
                     key={index}
