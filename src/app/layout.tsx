@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   title: "Dips Agency",
   description: "Dips Agency",
 };
+const dataWebsiteId = process.env.UMAMI_ID;
 
 export default function RootLayout({
   children,
@@ -25,6 +26,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="Dips Agency" href="/fav.png" />
+        <script
+          async
+          src="https://analytics.eu.umami.is/script.js"
+          data-website-id={`${dataWebsiteId}`}
+        ></script>
+      </head>
       <body className={poppins.className}>
         <Navbar />
         <div className="flex flex-col justify-evenly items-center pt-24 antialiased">
