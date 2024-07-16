@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <>
       <title>Shipping | Dips Agency</title>
+      {/* <link rel="icon" href="/dips.ico" type="image/x-icon" /> */}
       <div className="flex items-center justify-between">
         <Test />
       </div>
